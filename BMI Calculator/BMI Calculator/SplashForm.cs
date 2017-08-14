@@ -12,9 +12,28 @@ namespace BMI_Calculator
 {
     public partial class SplashForm : Form
     {
-        public SplashForm()
+        private void SplashFormTimer_Tick(object sender, EventArgs e)
         {
-            InitializeComponent();
+            BmiCalculator bmiCalculator = new BmiCalculator();
+            bmiCalculator.Show();
+            this.Hide();
+            SplashFormTimer.Enabled = false;//it is used to turn timer off
+
+            
+        }
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SplashForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
